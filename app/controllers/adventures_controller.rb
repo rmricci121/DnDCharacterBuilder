@@ -1,4 +1,4 @@
-class AdventureController < ApplicationController
+class AdventuresController < ApplicationController
   def new
   end
 

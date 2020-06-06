@@ -1,10 +1,16 @@
-class CharacterController < ApplicationController
+class CharactersController < ApplicationController
   def new
     @character = Character.new
   end
 
   def create 
-    @character = Character.create(params)
+    @character = Character.create(character_params)
+    if @character.save
+      redirect_to character_path(@character)
+    else 
+      render 'new'
+    end
+
   end
 
   def show
@@ -12,5 +18,10 @@ class CharacterController < ApplicationController
   end
 
   def index
+  end
+
+  private 
+  def character_params
+    params.require(:character).permit(:name, :race, :klass)
   end
 end

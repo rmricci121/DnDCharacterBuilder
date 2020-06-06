@@ -1,4 +1,4 @@
-class CampaignController < ApplicationController
+class CampaignsController < ApplicationController
   def new
   end
 
