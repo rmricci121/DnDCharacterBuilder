@@ -12,14 +12,14 @@ Rails.application.routes.draw do
   # get 'sessions/new'
   # get 'sessions/show'
   # get 'sessions/index'
-  # get 'user/new'
+   #get 'users/new'
   # get 'user/show'
   
   
   
-  resources :user
-  resources :character
-  resources :campaign
-  resources :adventure
+  resources :users
+  resources :characters
+  resources :campaigns
+  resources :adventures
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
