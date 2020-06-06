@@ -15,6 +15,10 @@ Rails.application.routes.draw do
    #get 'users/new'
   # get 'user/show'
   
+  resources :users do 
+    resources :characters
+  end
+  
   
   
   resources :users

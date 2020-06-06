@@ -1,0 +1,13 @@
+<%= form_for( @character) do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+
+<%= f. label :race %>
+<%= f.text_field :race %><br>
+
+<%= f.label :klass, "Class"  %>
+<%= f.text_field :klass %><br>
+
+
+<%= f.submit "Create Character" %>
+<% end %>
