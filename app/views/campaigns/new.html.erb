@@ -1,4 +1,8 @@
-<h1>Cretae New Campaign</h1>
+<h1>Create New Campaign</h1>
 
-
+<%= form_for(@campaign) do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.submit 'Start Campaign' %>
+<% end %>
 
