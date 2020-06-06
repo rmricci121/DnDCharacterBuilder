@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   get 'signin' => 'sessions#new'
   post 'signin' => 'sessions#create'
-  
+  #get 'signup' => 'users#new'
   get 'logout' => 'sessions#destroy'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
