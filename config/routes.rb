@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     resources :characters
   end
 
-  resources :campaign do 
+  resources :campaigns do 
     resources :adventures
     end
   

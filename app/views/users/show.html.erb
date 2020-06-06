@@ -1,6 +1,9 @@
-<h1>Welcome to your boring show page</h1>
+<h1>Welcome to your boring show page <%= @user.username %><br></h1>
 
-<%= @user.username %><br>
+
+
+<%= link_to  "View Your Characters", user_characters_path(@user) %><br>
 
 <%= link_to  "Create Character", new_user_character_path(@user) %><br>
-<%= link_to  "Create Canpaign", new_campaign_path(@user) %>
+
+<%= link_to  "Create Campaign", new_campaign_path(@user) %>

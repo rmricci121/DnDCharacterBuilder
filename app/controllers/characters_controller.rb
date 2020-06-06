@@ -16,10 +16,26 @@ class CharactersController < ApplicationController
   end
 
   def show
-    @character = Character.find(params[:id])
+    if params[:user_id]
+      @user = User.find_by(id: params[:user_id])
+      @character = Character.find_by(id: params[:id])
+    if @character.nil?
+      redirect_to user_characters_path(@user)
+    end
+    else
+      @character = Character.find_by(id: params[:id])
+    end
   end
 
   def index
+    if !params[:user_id]
+      @characters = Character.all
+    else
+      @user = User.find_by(id: params[:user_id])
+      @characters = @user.characters
+    end
+  
+
   end
 
   private 
