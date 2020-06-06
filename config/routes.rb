@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   resources :users do 
     resources :characters
   end
-  
+
   
   
   resources :users
@@ -29,6 +29,6 @@ Rails.application.routes.draw do
   get 'signin' => 'sessions#new'
   post 'signin' => 'sessions#create'
   #get 'signup' => 'users#new'
-  get 'logout' => 'sessions#destroy'
+  delete '/session/', to: 'sessions#destroy'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
