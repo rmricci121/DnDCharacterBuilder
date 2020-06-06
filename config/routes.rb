@@ -19,7 +19,9 @@ Rails.application.routes.draw do
     resources :characters
   end
 
-  
+  resources :campaign do 
+    resources :adventures
+    end
   
   resources :users
   resources :characters
