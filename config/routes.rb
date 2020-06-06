@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'welcome#home'
   # get 'adventure/new'
   # get 'adventure/show'
   # get 'adventure/index'
@@ -13,7 +14,9 @@ Rails.application.routes.draw do
   # get 'sessions/index'
   # get 'user/new'
   # get 'user/show'
-
+  
+  
+  
   resources :user
   resources :character
   resources :campaign
