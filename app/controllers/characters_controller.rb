@@ -4,13 +4,15 @@ class CharactersController < ApplicationController
   end
 
   def create 
+    if current_user
+      #byebug
     @character = Character.create(character_params)
     if @character.save
       redirect_to character_path(@character)
     else 
       render 'new'
     end
-
+  end
   end
 
   def show
