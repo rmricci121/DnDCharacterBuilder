@@ -1,4 +1,5 @@
 class CampaignsController < ApplicationController
+  
   def new
     @campaign = Campaign.new
   end
@@ -17,5 +18,6 @@ class CampaignsController < ApplicationController
   end
 
   def index
+    @campaigns = Campaign.all
   end
 end
