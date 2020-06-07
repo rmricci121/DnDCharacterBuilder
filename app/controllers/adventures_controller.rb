@@ -4,7 +4,7 @@ class AdventuresController < ApplicationController
   end
 
   def create
-    @adventure = Adventure.create(name: params[:name])
+    @adventure = Adventure.create(adventure_params)
     if @adventure.save
       redirect_to adventure_path(@adventure)
     else
@@ -14,10 +14,16 @@ class AdventuresController < ApplicationController
   end
 
   def show
-    @adventure = Adventure.find_by(name: params[:name])
+    @adventure = Adventure.find_by(id: params[:id])
   end
 
   def index
     @adventures = Adventure.all
   end
+end
+
+private
+ 
+def adventure_params
+  params.require(:adventure).permit(:name)
 end
