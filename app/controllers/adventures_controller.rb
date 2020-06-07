@@ -10,14 +10,14 @@ class AdventuresController < ApplicationController
     else
       render 'new'
     end
-    
+
   end
 
   def show
-    @adventure = Adventure.find(params[:id])
+    @adventure = Adventure.find_by(name: params[:name])
   end
 
   def index
-  
+    @adventures = Adventure.all
   end
 end

@@ -1,2 +1,5 @@
-<h1>Adventure#index</h1>
-<p>Find me in app/views/adventure/index.html.erb</p>
+<h1>All Adventure Groups</h1>
+
+<% @adventures.each do |adventure| %>
+    <p><%=link_to adventure.name, adventure_path(adventure) %></p>
+    <%end%>

@@ -1,7 +1,7 @@
 <h1>Create a new adventure</h1>
 
-<%= form_for(@adventure) do |f| %>
+<%= form_for @adventure do |f| %>
 <%= f.label :name %>
 <%= f.text_field :name %>
-<%= f.submit 'Start Adventure' %>
+<%= f.submit 'Create Adventure' %>
 <% end %>
