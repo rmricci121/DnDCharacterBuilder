@@ -4,15 +4,16 @@ class CharactersController < ApplicationController
   end
 
   def create 
-    #if current_user
-      #byebug
+    if current_user
     @character = Character.create(character_params)
+    @character.user_id = current_user.id
+    #byebug
     if @character.save
       redirect_to user_characters_path(@character)
     else 
       render 'new'
     end
-   #end
+   end
   end
 
   def show
@@ -47,7 +48,7 @@ class CharactersController < ApplicationController
       @character = Character.find_by(id: params[:id])
       @character.update(character_params)
       if @character.valid?
-        redirect_to character_path(@character)
+        #redirect_to character_path(@character)
       else
         render :edit
       end
@@ -57,6 +58,6 @@ class CharactersController < ApplicationController
 
   private 
   def character_params
-    params.require(:character).permit(:name, :race, :klass)
+    params.require(:character).permit(:name, :race, :klass,:user_id)
   end
 end

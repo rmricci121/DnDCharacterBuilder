@@ -1,9 +1,15 @@
-<h1>Character#show</h1>
+<h1><%= @character.name %></h1>
 
 
+<h2>Race:<%= @character.race %></h2>
+<h2>Class:<%= @character.klass %></h2>
 
-<%= @character.name %>
-<%= @character.race %>
-<%= @character.klass %>
 
+<h3>Find a Campaign by date:</h3>
+
+<%= form_tag campaigns_path, :method => "get" do %>
+<%= label_tag(:search, "What day of the week do you want to play?")%>
+<%= text_field_tag :search, params[:search] %>
+<%= submit_tag("Search", :name => nil) %>
+<%end%>
 

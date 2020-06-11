@@ -1,9 +1,9 @@
-<h1><%= @user.username%>'s Character List</h1>
+<h1><%= current_user.username %>'s Character List</h1>
 
 <ul>
-<% @user.characters.each do |character| %>
+<% current_user.characters.each do |character| %>
 
-   <li> <%= character.name %>
+   <li><%= link_to  character.name, character_path(character) %> 
     <%end%>
 
     </ul>

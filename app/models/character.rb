@@ -6,4 +6,6 @@ class Character < ApplicationRecord
     validates :name, presence: true
     validates :race, presence: true
     validates :klass, presence: true
+
+    
 end

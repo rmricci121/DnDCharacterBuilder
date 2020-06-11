@@ -1,0 +1,15 @@
+<h1> Edit Campaign</h1>
+<%= form_for(@campaign) do |f| %>
+<%= f.label :character_id, "Character Name:" %>
+<%= f.collection_select :character_id, Character.all, :id, :name, prompt: "Please, select a character" %><br>
+
+<%= f.label :name, "Campaign Name:" %>
+<%= f.text_field :name %><br/>
+
+<%= f.label :play_date, "When do you play?" %>
+<%= f.datetime_local_field :play_date %>
+
+<%= f.hidden_field :adventure_id %>
+
+<%= f.submit 'Start Campaign' %>
+<% end %>

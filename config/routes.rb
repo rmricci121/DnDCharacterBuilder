@@ -23,11 +23,19 @@ Rails.application.routes.draw do
     resources :campaigns
     end
   
-  resources :users
+  #resources :users
   resources :characters
   resources :campaigns
   resources :adventures
 
+  # get 'auth/:provider/callback', to: 'sessions#googleAuth'
+  # get 'auth/failure', to: redirect('/')
+
+  # get '/auth/google/callback', to: 'sessions#create'
+  # get '/auth/google'
+
+  get '/auth/:provider/callback' => 'sessions#omniauth'
+  
   get 'signin' => 'sessions#new'
   post 'signin' => 'sessions#create'
   #get 'signup' => 'users#new'

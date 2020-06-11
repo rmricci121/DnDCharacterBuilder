@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_06_181127) do
+ActiveRecord::Schema.define(version: 2020_06_10_193559) do
 
   create_table "adventures", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_06_06_181127) do
     t.integer "adventure_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.datetime "play_date"
   end
 
   create_table "characters", force: :cascade do |t|
@@ -41,6 +42,8 @@ ActiveRecord::Schema.define(version: 2020_06_06_181127) do
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "google_token"
+    t.string "google_refresh_token"
   end
 
 end

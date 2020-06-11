@@ -15,6 +15,7 @@ class AdventuresController < ApplicationController
 
   def show
     @adventure = Adventure.find_by(id: params[:id])
+    @campaigns = Campaign.all
   end
 
   def index

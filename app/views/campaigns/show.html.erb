@@ -1,7 +1,4 @@
-<h1>Campaign#show</h1>
-<p>Find me in app/views/campaign/show.html.erb</p>
+<h1><%= @campaign.name %></h1>
+<h2>Campaign play time: <%= @campaign.play_date.strftime("%B %d, %Y") %></h2><br>
 
-<%= @campaign.name %>
-
-<%= link_to  "Create Adventure", new_campaign_adventure_path(@campaign) %><br>
-
+<%= link_to  "Edit Campaign", edit_campaign_path(@campaign) %>
