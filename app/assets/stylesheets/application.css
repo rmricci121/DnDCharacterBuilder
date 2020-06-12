@@ -130,6 +130,11 @@ header a strong {
     margin-right: 0.5rem;
 }
 
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
 header nav img {
     margin: 1rem 0;
 }
@@ -184,6 +189,7 @@ nav ul li ul li,
 nav ul li ul li a {
     display: block;
 }
+
 
 /* Typography */
 code,

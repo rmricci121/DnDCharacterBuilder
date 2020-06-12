@@ -1,4 +1,7 @@
 <h1><%= @campaign.name %></h1>
+
+<h2>Campaign Day of Play:<%= @campaign.day_of_week.titlecase %></h2>
+
 <h2>Campaign play time: <%= @campaign.play_date.strftime("%B %d, %Y") %></h2><br>
 
-<%= link_to  "Edit Campaign", edit_campaign_path(@campaign) %>
+<%= link_to "<button>Edit Campaign</button>".html_safe, edit_campaign_path(@campaign) %>

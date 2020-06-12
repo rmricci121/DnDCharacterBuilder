@@ -2,8 +2,8 @@
 
 
 
-<%= link_to  "View Your Characters", user_characters_path(@user) %><br>
+<%= link_to  "<button>View Your Characters</button>".html_safe, user_characters_path(@user) %><br>
 
-<%= link_to  "Create Character", new_user_character_path(@user) %><br>
+<%= link_to  "<button>Create Character</button>".html_safe, new_user_character_path(@user) %><br>
 
-<%= link_to  "Create Adventure", new_adventure_path(@user) %>
+<%= link_to  "<button>Create Adventure</button>".html_safe, new_adventure_path(@user) %>

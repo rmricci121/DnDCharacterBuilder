@@ -41,12 +41,12 @@ class CampaignsController < ApplicationController
   end
 
   def index
-    @campaigns = Campaign.search(params[:search])
+    @campaigns = Campaign.day_played(params[:search])
   end
 private
  
 def campaign_params
-  params.require(:campaign).permit(:name, :adventure_id, :character_id, :play_date, :search)
+  params.require(:campaign).permit(:name, :adventure_id, :character_id, :play_date, :day_of_week, :search)
 end
 
 end
