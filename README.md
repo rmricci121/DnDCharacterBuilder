@@ -3,7 +3,6 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Status](#status)
@@ -12,9 +11,6 @@
 
 ## General info
 This project is a start for an online gaming system that my friends and I can play D&D/ 
-
-## Screenshots
-![Example screenshot](./img/screenshot.png)
 
 ## Technologies
 * Ruby - version 2.6.1p33
