@@ -1,6 +1,6 @@
 <% if @user.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this article from being saved:</h2>
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
  
     <ul>
     <% @user.errors.full_messages.each do |msg| %>
@@ -25,33 +25,6 @@
 
 <%= f.submit %>
 
-<html>
-<head>
-  <meta name="google-signin-client_id" content="ENV[GOOGLE_CLIENT_ID]" >
-</head>
-<body>
-  <div id="my-signin2"></div>
-  <script>
-    function onSuccess(googleUser) {
-      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-    }
-    function onFailure(error) {
-      console.log(error);
-    }
-    function renderButton() {
-      gapi.signin2.render('my-signin2', {
-        'scope': 'profile email',
-        'width': 240,
-        'height': 50,
-        'longtitle': true,
-        'theme': 'dark',
-        'onsuccess': onSuccess,
-        'onfailure': onFailure
-      });
-    }
-  </script>
+<%= link_to "Signup with Google", '/auth/google_oauth2' %>
 
-  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-</body>
-</html>
 <% end %>

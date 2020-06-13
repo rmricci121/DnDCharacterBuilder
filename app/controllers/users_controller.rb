@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-    #skip_before_action :verified_user, only: [:new, :create]
     skip_before_action :is_logged_in?, only: [:new, :create]
   
     def new
@@ -18,14 +17,12 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find_by(id: params[:id])
-        #@user.id = session[params[:id]]
     end
 
     def index
         @users = User.all
     end
     
-
     private
 
     def user_params
