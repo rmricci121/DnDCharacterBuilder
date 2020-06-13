@@ -1,5 +1,7 @@
 # DnDCharcterBuilder
-    This app lets you create a user. As a user you can then create a character and an adventure. Within an adventure you can create a campaign. You can also search for campaign's by day of the week. You can also edit charcaters and campaigns. 
+    This app lets you create a user. As a user you can then create a character and an adventure. 
+    Within an adventure you can create a campaign. You can also search for campaign's by day of the week. 
+    You can also edit charcaters and campaigns. 
 
 ## Table of contents
 * [General info](#general-info)
