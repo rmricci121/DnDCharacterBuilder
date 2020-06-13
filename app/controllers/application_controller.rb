@@ -5,19 +5,6 @@ class ApplicationController < ActionController::Base
    
      private
    
-     def verified_user
-       redirect_to '/' unless user_is_authenticated
-     end
-   
-   
-    def require_login
-      if current_user
-        current_user
-      else
-          redirect_to '/'
-        end
-    end
-
     def is_logged_in?
       !!session[:id]
     end
