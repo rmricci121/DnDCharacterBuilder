@@ -7,7 +7,5 @@ class Character < ApplicationRecord
     validates :race, presence: true
     validates :klass, presence: true
 
-    def owned_by?(user)
-        self.user_id == (user.try(:id) || user)
-      end
+   
 end
