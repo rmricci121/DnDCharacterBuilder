@@ -24,17 +24,24 @@ class CharactersController < ApplicationController
   end
   
   def edit
-    @recipe = Character.find_by(id: params[:id])
+    if current_user 
+    @character = Character.find_by(id: params[:id])
+    end
   end
 
   def update
     @character = Character.find_by(id: params[:id])
+    if current_user == @character.user 
     @character.update(character_params)
     if @character.valid?
       redirect_to character_path(@character)
     else
       render :edit
     end
+  else
+    flash[:alert] = "You Don't Access To Do That!"
+  end
+
   end
 
   private 
