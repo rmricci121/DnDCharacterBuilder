@@ -39,7 +39,7 @@ class CharactersController < ApplicationController
       render :edit
     end
   else
-    flash[:alert] = "You Don't Access To Do That!"
+    flash[:alert] = "You Don't Have Access To Do That!"
   end
 
   end
