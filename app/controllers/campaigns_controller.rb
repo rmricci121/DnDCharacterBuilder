@@ -43,6 +43,7 @@ class CampaignsController < ApplicationController
   def index
     @campaigns = Campaign.day_played(params[:search])
   end
+  
 private
  
 def campaign_params

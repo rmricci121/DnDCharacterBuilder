@@ -7,5 +7,6 @@ class Character < ApplicationRecord
     validates :race, presence: true
     validates :klass, presence: true
 
-   
+   scope :character_search, -> (c_search) {where(race: c_search.titlecase)}
+
 end

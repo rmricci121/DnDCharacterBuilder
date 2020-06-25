@@ -20,7 +20,17 @@ class CharactersController < ApplicationController
   end
 
   def index
-    @characters = Character.all
+    
+   # if params[:c_search] 
+   
+      @characters = Character.character_search(params[:c_search]) unless params[:c_search].blank?
+      @characters = Character.all
+      #byebug
+      #byebug
+    #else
+      
+    #end
+
   end
   
   def edit
@@ -46,6 +56,6 @@ class CharactersController < ApplicationController
 
   private 
   def character_params
-    params.require(:character).permit(:name, :race, :klass,:user_id)
+    params.require(:character).permit(:name, :race, :klass, :user_id, :c_search)
   end
 end

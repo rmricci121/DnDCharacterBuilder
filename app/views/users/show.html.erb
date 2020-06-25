@@ -7,3 +7,9 @@
 <%= link_to  "<button>Create Character</button>".html_safe, new_user_character_path(@user) %><br>
 
 <%= link_to  "<button>Create Adventure</button>".html_safe, new_adventure_path %>
+
+<%= form_tag characters_path, :method => "get" do %>
+<%= label_tag(:c_search, "Who are you looking for?")%>
+<%= text_field_tag :c_search, params[:c_search] %>
+<%= submit_tag("Search", :name => nil) %>
+<%end%>

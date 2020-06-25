@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     end
 
     def index
-        @users = User.all
+        @characters = Character.character_search(params[:c_search])
     end
     
     private

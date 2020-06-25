@@ -18,8 +18,8 @@ Rails.application.routes.draw do
 
   get '/auth/:provider/callback' => 'sessions#omniauth'
 
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
+  get 'signin' => 'sessions#new'
+  post 'signin' => 'sessions#create'
   
   delete '/session/', to: 'sessions#destroy'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
