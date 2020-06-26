@@ -20,17 +20,11 @@ class CharactersController < ApplicationController
   end
 
   def index
-    
-   # if params[:c_search] 
-   
-      @characters = Character.character_search(params[:c_search]) unless params[:c_search].blank?
-      @characters = Character.all
-      #byebug
-      #byebug
-    #else
-      
-    #end
-
+    if params[:c_search] 
+      @characters = Character.character_search(params[:c_search]) 
+    else
+      @characters = current_user.characters
+    end
   end
   
   def edit
