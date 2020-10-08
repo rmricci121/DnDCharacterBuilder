@@ -28,7 +28,7 @@ Then go to 'http://localhost:3000/' or your local server.
 Project is: _finished_
 
 ## Acknowledgments
-Hat tip to Awilmerding1 for her amazing walk-throgh and support. 
+Hat tip to Awilmerding1 for her amazing walk-through and support. 
 
 ## Contact
 Feel free to reach out:rmricci121@gmail.com
